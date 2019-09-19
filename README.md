@@ -31,7 +31,9 @@ or
 
 `pip3 install pygame`
 
-To run the game, execute the command (chose suitable python interpreter) `python pacmanGUI.py` on the terminal.
+To run the game, execute the command (choose suitable python interpreter) `python pacmanGUI.py` on the terminal.
+
+or
 
 `pacmanGUI` is a executable file. Run the game from this file.
 
