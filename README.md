@@ -21,16 +21,31 @@ The game requires pygame module to run. To install pygame for python, do this on
 
 #### python2
 `sudo apt-get install python-pygame`
-
 or
 
 `pip install pygame`
 
 #### python3
 `sudo apt-get install python3-pygame`
-
 or
 
 `pip3 install pygame`
 
 To run the game, execute the command (chose suitable python interpreter) `python pacmanGUI.py` on the terminal.
+
+`pacmanGUI` is a executable file. Run the game from this file.
+
+or
+
+Create standalone executable file for `pacmanGUI.py`. To create standalone executable, do these
+
+## Installing PyInstaller
+PyInstaller can be installed using Pip, the Python package manager
+
+`pip install pyinstaller`
+
+## Building the Executable
+
+Now, build the executable
+
+`pyinstaller --onefile --windowed pacmanGUI.py`
