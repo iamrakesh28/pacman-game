@@ -10,8 +10,9 @@ import pickle
 '''
 gamma = 0.9
 ep = 0.1
-def velocity(v2,v1):
-	dv = (v2[0]-v1[0],v2[1],v1[1])
+
+def velocity(v2, v1):
+	dv = (v2[0] - v1[0], v2[1], v1[1])
 	if dv[0] != 0:
 		if dv[0] == 1:
 			return 1
@@ -21,7 +22,8 @@ def velocity(v2,v1):
 			return 3
 		return 2
 	return 4
-def getState(pac,pac1,ghost,ghost1,f,time):
+
+def getState(pac, pac1, ghost, ghost1, f, time):
 	st = (pac + (velocity(pac,pac1),),)
 	st += (f,)
 	for i in range(min(len(ghost),len(ghost1))):
@@ -100,7 +102,7 @@ class env:
 E = env()
 A = None
 r = None
-def reward(g,lg,f,over,time,dg,df):
+def reward(g, lg, f, over, time, dg, df):
 	if over == 1:
 		return 10000
 	if over == -1:
@@ -109,13 +111,13 @@ def reward(g,lg,f,over,time,dg,df):
 	rew = 500.0/t
 	inv = max(0.5,abs(2-dg))
 	if time:
-		rew += -100.0*lg*dg + df + 500.0*g
+		rew += -100.0 * lg * dg + df + 500.0 * g
 	else:
-		rew += 100.0*lg*inv + 200.0*f - 100.0*df
+		rew += 100.0 * lg * inv + 200.0 * f - 100.0 * df
 	return 0
 
-def Qlearning(pac,pac1,ghost,ghost1,lf,f,over,dg,df,time):
-	st = getState(pac,pac1,ghost,ghost1,f,time)
+def Qlearning(pac, pac1, ghost, ghost1, lf, f, over, dg, df, time):
+	st = getState(pac, pac1, ghost, ghost1, f, time)
 	global A
 	global r
 	if st not in E.memo:
@@ -129,13 +131,13 @@ def Qlearning(pac,pac1,ghost,ghost1,lf,f,over,dg,df,time):
 	if A != None:
 		alpha = 1.0/(1.0+t)
 		s_,a_ = A
-		E.Q[s_][a_] = (1-alpha)*E.Q[s_][a_] + alpha*(r + gamma*max(E.Q[s]))
+		E.Q[s_][a_] = (1 - alpha) * E.Q[s_][a_] + alpha * (r + gamma * max(E.Q[s]))
 	if np.random.random() < ep and E.cnt < 10000 :
 		a = np.random.randint(4)
 	else:
 		a = np.argmax(E.Q[s])
 	A = (s,a)
 	E.t += 1
-	r = reward(len(ghost)-len(ghost1),len(ghost),lf-len(f),over,time,dg,df)
+	r = reward(len(ghost) - len(ghost1), len(ghost), lf - len(f), over, time, dg, df)
 	return a
 

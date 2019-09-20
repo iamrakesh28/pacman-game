@@ -120,7 +120,7 @@ else:
 	bot = 1
 	print('Bot will play')	
 	os.system('sleep 1')
-num = 100
+num = 10
 #train.E.reinit()
 for epi in range(num):
 	mat,n,m,ghost,pac,f = read()
@@ -167,7 +167,7 @@ for epi in range(num):
 		if delay % 2:
 			if time:
 				ghost1,dg,df = pacmanBFS.BFS(mat,ghost,n,m,pac,f)
-				ghost1 = escape.esc(mat,pac,n,m,ghost)
+				ghost1 = escape.BFS(mat,ghost,n,m,pac)
 			else:
 				ghost1,dg,df = pacmanBFS.BFS(mat,ghost,n,m,pac,f)
 		delay = (delay + 1)%2
@@ -181,4 +181,4 @@ for epi in range(num):
 		if len(f) == 0:
 			f = forig
 	move = train.Qlearning(pac,pac1,ghost,ghost1,len(forig),f,over,dg,df,time)
-train.E.write()	
+#train.E.write()	
