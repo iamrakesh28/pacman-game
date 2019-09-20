@@ -193,7 +193,6 @@ class window:
 	move = 1 -> down
 	move = 2 -> left
 	move = 3 -> right
-
 '''
 def main() :
 
@@ -261,6 +260,7 @@ def main() :
 			G.fruit = G.fruitOrg
 		G.score += 1
 		G.time = max(0,G.time - 1)
+		
 		Win.clock.tick(6)
 		pygame.display.flip()
 
