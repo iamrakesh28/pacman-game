@@ -39,7 +39,8 @@ def BFS(mat, ghost, n, m, pac):
 			gh += ((r, c), )
 			continue
 		for d in range(5):
-			ds += [(dist[r + dr[d]][c + dc[d]], r + dr[d], c + dc[d])]
+			if valid(dr[d] + r, dc[d] + c, n, m) and mat[dr[d] + r][dc[d] + c] != '#':
+				ds += [(dist[r + dr[d]][c + dc[d]], r + dr[d], c + dc[d])]
 		ds.sort()
 		ds.reverse()
 		found = 0
