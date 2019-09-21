@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 # pacman-game
+=======
+# Pacman Game
+>>>>>>> 66955083a9839fb1b2f1ed31a59b47b88175cbe9
 
 ##### pacmanMatrix
  This is configuration file for Pacman Board. 'p' is for pacman, 'g' for ghost, 'f' for fruit and '#' for obstacle. If you want to change the board, make sure that after changes, total characters (including spaces) in each line is same and '#' should be on the border of the board. Put spaces for empty positions. 
 ##### escape.py
+<<<<<<< HEAD
   This file gives next position of ghosts such that it maximizes the current shortest distance form the pacman. It uses Breadth-first Search as a subroutine.
 ##### pacmanBFS.py
   This file does Breadth First Search from pacman position and finds the shortest path to each ghosts. The ghosts uses this path to reach pacman in minimum time.
@@ -51,3 +56,27 @@ PyInstaller can be installed using Pip, the Python package manager
 Now, build the executable
 
 `pyinstaller --onefile --windowed pacmanGUI.py`
+=======
+This file gives next position of ghosts such that it maximizes the euclidean distance from the pacman.
+##### pacmanBFS.py
+  This file does Breadth First Search from pacman position and finds the shortest path to each ghosts. The ghosts uses this path to reach pacman in minimum time.
+##### pacman.py
+  It is the main program or game. The game runs in the terminal.
+  
+##### 5. visualPac.py
+  It takes board matrix, ghosts, fruits and pacman positions as input and displays in the shell. This program creates visualization in the terminal.
+  
+  Some snapshots of the game
+  
+#	![Pacman1](https://github.com/iamrakesh28/Games/blob/master/images/pacman1.png)
+
+To run the game, execute the command `python3 pacman.py` on the terminal.
+
+or
+
+To make `pacman.py` executable, type the following
+
+`chmod +x myscript.py`
+
+Type `./pacman.py` to run.
+>>>>>>> 66955083a9839fb1b2f1ed31a59b47b88175cbe9
