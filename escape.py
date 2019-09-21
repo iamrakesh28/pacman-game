@@ -40,6 +40,8 @@ def BFS(mat, ghost, n, m, pac):
 			continue
 		for d in range(5):
 			if valid(dr[d] + r, dc[d] + c, n, m) and mat[dr[d] + r][dc[d] + c] != '#':
+				if (dr[d] + r, dc[d] + c) == (pac[0], pac[1]):
+					continue
 				ds += [(dist[r + dr[d]][c + dc[d]], r + dr[d], c + dc[d])]
 		ds.sort()
 		ds.reverse()

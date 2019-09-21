@@ -8,7 +8,7 @@ import train
 
 block_size = 50
 time_init = 0
-total_games = 3
+total_games = 4
 show_game = 3
 bot = True
 
@@ -307,7 +307,7 @@ def main() :
 			if delay % 2:
 				if G.time:
 					G.ghost, dg, df = pacmanBFS.BFS(G.matrix, G.ghost, G.row, G.col, G.pac, G.fruit)
-					G.ghost = escape.BFS(G.matrix, G.ghost, G.row, G.col, G.pac)
+					G.ghost = escape.BFS(G.matrix, G.ghost_prev, G.row, G.col, G.pac)
 				else:
 					G.ghost, dg, df = pacmanBFS.BFS(G.matrix, G.ghost, G.row, G.col, G.pac, G.fruit)
 			
@@ -332,7 +332,7 @@ def main() :
 			G.score += 1
 			G.time = max(0, G.time - 1)
 			if eps > total_games - show_game:
-				Win.clock.tick(6)
+				Win.clock.tick(4)
 				pygame.display.flip()
 		move = train.Qlearning(G.pac, G.pac_prev, G.ghost_prev, G.ghost, len(G.fruitOrg), G.fruit, over, dg, df, G.time)
 
@@ -349,4 +349,4 @@ def main() :
 if __name__ == '__main__':
 	#train.E.reinit()
 	main()
-	#train.E.write()
+	train.E.write()
