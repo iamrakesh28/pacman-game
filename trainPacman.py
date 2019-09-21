@@ -181,4 +181,4 @@ for epi in range(num):
 		if len(f) == 0:
 			f = forig
 	move = train.Qlearning(pac,pac1,ghost,ghost1,len(forig),f,over,dg,df,time)
-#train.E.write()	
+train.E.write()	
