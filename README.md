@@ -1,5 +1,5 @@
 #     Pacman Bot
-Pacman Bot trained using Q-Learning algorithm to play the Arcade Pacman.
+## Pacman Bot trained using Q-Learning algorithm to play the Arcade Pacman.
 ##### pacmanMatrix
   This is configuration file for Pacman Board. 'p' is for pacman, 'g' for ghost, 'f' for fruit and '#' for obstacle. If you want to change the board, make sure that after changes, total characters (including spaces) in each line is same and '#' should be on the border of the board. Put spaces for empty positions. 
 ##### escape.py
@@ -33,18 +33,12 @@ Each time the game runs, the game begins its training from the previous game dat
   
   Some snapshots of the game
   
-  ![Pacman1](https://github.com/iamrakesh28/pacman-game/blob/gui/Images/pac-game1.png) 
+  ![Pacman1](https://github.com/iamrakesh28/pacman-game/blob/pacman-ai/Images/train1.png) 
  
 
 # Installation
 
 The Bot Game requires pygame module to run. To install pygame for python, do this on a terminal (Ctrl+Alt+t)
-
-#### python2
-`sudo apt-get install python-pygame`
-or
-
-`pip install pygame`
 
 #### python3
 `sudo apt-get install python3-pygame`
@@ -52,7 +46,7 @@ or
 
 `pip3 install pygame`
 
-To run the game, execute the command `python pacmanGUI.py` on the terminal.
+To run the game, execute the command `python3 pacmanGUI.py` on the terminal.
 
 or
 
