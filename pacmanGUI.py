@@ -9,7 +9,7 @@ import train
 block_size = 50
 time_init = 0
 total_games = 10
-show_game = 3
+show_game = 5
 bot = True
 
 class Game :

@@ -8,8 +8,8 @@ import pickle
 3 -> right
 4 -> still
 '''
-gamma = 0.9
-ep = 0.1
+gamma = 0.85
+ep = 0.2
 
 def velocity(v2, v1):
 	dv = (v2[0] - v1[0], v2[1], v1[1])
@@ -108,13 +108,13 @@ def reward(g, lg, f, over, time, dg, df):
 	if over == -1:
 		return -10000
 	t = E.t
-	rew = 500.0/t
+	rew = 0.0
 	inv = max(0.5,abs(2-dg))
 	if time:
-		rew += -100.0 * lg * dg + df + 500.0 * g
-	else:
-		rew += 100.0 * lg * inv + 200.0 * f - 100.0 * df
-	return 0
+		rew += -800.0 * lg * dg + df + 800.0 * g
+	#else:
+	#	rew += -200.0 * df
+	return rew
 
 def Qlearning(pac, pac1, ghost, ghost1, lf, f, over, dg, df, time):
 	st = getState(pac, pac1, ghost, ghost1, f, time)
