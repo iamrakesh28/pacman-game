@@ -15,6 +15,7 @@
   Some snapshots of the game
   
 #	![Pacman1](https://github.com/iamrakesh28/Games/blob/master/images/pacman1.png)
+#	![Pacman2](https://github.com/iamrakesh28/pacman-game/blob/gui/Images/pacman-old.gif)
 
 To run the game, execute the command `python3 pacman.py` on the terminal.
 
