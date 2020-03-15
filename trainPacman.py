@@ -120,8 +120,8 @@ else:
 	bot = 1
 	print('Bot will play')	
 	os.system('sleep 1')
-num = 50000
-train.E.reinit()
+num = 5
+# train.E.reinit()
 for epi in range(num):
 	mat,n,m,ghost,pac,f = read()
 	ghost1 = ghost
