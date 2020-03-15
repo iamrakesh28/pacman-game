@@ -8,7 +8,7 @@ import pickle
 3 -> right
 4 -> still
 '''
-gamma = 0.85
+gamma = 0.9999
 ep = 0.2
 
 def velocity(v2, v1):
@@ -107,7 +107,8 @@ def reward(g, lg, f, over, time, dg, df):
 		return 10000
 	if over == -1:
 		return -10000
-	t = E.t
+	# t = E.t
+	return 0
 	rew = 0.0
 	inv = max(0.5,abs(2-dg))
 	if time:
