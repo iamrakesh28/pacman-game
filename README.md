@@ -6,6 +6,25 @@
   This file gives next position of ghosts such that it maximizes the current shortest distance form the pacman. It uses Breadth-first Search as a subroutine.
 ##### pacmanBFS.py
   This file does Breadth First Search from pacman position and finds the shortest path to each ghosts. The ghosts uses this path to reach pacman in minimum time.
+##### pacman.py
+  It is the main program or game. The game runs in the terminal.
+  
+#####visualPac.py
+  It takes board matrix, ghosts, fruits and pacman positions as input and displays in the shell. This program creates visualization in the terminal.
+  
+  Some snapshots of the game
+  
+#	![Pacman1](https://github.com/iamrakesh28/Games/blob/master/images/pacman1.png)
+
+To run the game, execute the command `python3 pacman.py` on the terminal.
+
+or
+
+To make `pacman.py` executable, type the following
+
+`chmod +x myscript.py`
+
+Type `./pacman.py` to run.
 ##### pacmanGUI.py
   It is the main program or game. The game runs in a graphical interface and pygame module is needed for it.
   
@@ -51,26 +70,3 @@ PyInstaller can be installed using Pip, the Python package manager
 Now, build the executable
 
 `pyinstaller --onefile --windowed pacmanGUI.py`
-
-This file gives next position of ghosts such that it maximizes the euclidean distance from the pacman.
-##### pacmanBFS.py
-  This file does Breadth First Search from pacman position and finds the shortest path to each ghosts. The ghosts uses this path to reach pacman in minimum time.
-##### pacman.py
-  It is the main program or game. The game runs in the terminal.
-  
-##### 5. visualPac.py
-  It takes board matrix, ghosts, fruits and pacman positions as input and displays in the shell. This program creates visualization in the terminal.
-  
-  Some snapshots of the game
-  
-#	![Pacman1](https://github.com/iamrakesh28/Games/blob/master/images/pacman1.png)
-
-To run the game, execute the command `python3 pacman.py` on the terminal.
-
-or
-
-To make `pacman.py` executable, type the following
-
-`chmod +x myscript.py`
-
-Type `./pacman.py` to run.
