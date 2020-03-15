@@ -33,7 +33,7 @@ Each time the game runs, the game begins its training from the previous game dat
   
   Some snapshots of the game
   
-  ![Pacman1](https://github.com/iamrakesh28/pacman-game/blob/pacman-ai/Images/train1.png) 
+  ![Pacman1](https://github.com/iamrakesh28/pacman-game/blob/pacman-ai/Images/pacmangui-ai.gif) 
  
 
 # Installation
