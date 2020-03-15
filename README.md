@@ -9,7 +9,7 @@
 ##### pacman.py
   It is the main program or game. The game runs in the terminal.
   
-#####visualPac.py
+##### visualPac.py
   It takes board matrix, ghosts, fruits and pacman positions as input and displays in the shell. This program creates visualization in the terminal.
   
   Some snapshots of the game
