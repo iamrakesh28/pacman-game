@@ -69,3 +69,7 @@ PyInstaller can be installed using Pip, the Python package manager
 Now, build the executable
 
 `pyinstaller --onefile --windowed pacmanGUI.py`
+
+## References
+[1] https://github.com/iamrakesh28/Games
+[2] https://en.wikipedia.org/wiki/Q-learning
