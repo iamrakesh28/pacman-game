@@ -1,5 +1,8 @@
 # Pacman Game
 
+This is the classical arcade Pacman developed in Python.
+
+### Description of some important files:
 ##### pacmanMatrix
  This is configuration file for Pacman Board. 'p' is for pacman, 'g' for ghost, 'f' for fruit and '#' for obstacle. If you want to change the board, make sure that after changes, total characters (including spaces) in each line is same and '#' should be on the border of the board. Put spaces for empty positions. 
 ##### escape.py
