@@ -1,5 +1,7 @@
 #     Pacman Bot
-## Pacman Bot trained using Q-Learning algorithm to play the Arcade Pacman.
+#### The Bot is trained using [Q-Learning](https://en.wikipedia.org/wiki/Q-learning) algorithm to play the classical Arcade [Pacman](https://github.com/iamrakesh28/pacman-game).
+
+### Description of some important files:
 ##### pacmanMatrix
   This is configuration file for Pacman Board. 'p' is for pacman, 'g' for ghost, 'f' for fruit and '#' for obstacle. If you want to change the board, make sure that after changes, total characters (including spaces) in each line is same and '#' should be on the border of the board. Put spaces for empty positions. 
 ##### escape.py
@@ -17,7 +19,7 @@
     
  Reward function is based on the above inputs. All these data are stored as a state. States are stored in python dicitionary. 
 ##### Dict/
-Each time the game runs, the game begins its training from the previous game data and stores the trained data inside the Dict/ folder.
+Each time the game runs, the game begins its training from the previous game data and stores the trained data inside the `Dict/` folder.
 ### Shell Version
 ##### visualPac.py
   It takes board matrix, ghosts, fruits and pacman positions as input and displays in the shell.
