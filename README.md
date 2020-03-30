@@ -12,9 +12,6 @@
 ##### visualPac.py
   It takes board matrix, ghosts, fruits and pacman positions as input and displays in the shell. This program creates visualization in the terminal.
   
-  Some snapshots of the game
-  
-#	![Pacman1](https://github.com/iamrakesh28/Games/blob/master/images/pacman1.png)
 #	![Pacman2](https://github.com/iamrakesh28/pacman-game/blob/gui/Images/pacman-old.gif)
 
 To run the game, execute the command `python3 pacman.py` on the terminal.
@@ -28,10 +25,6 @@ To make `pacman.py` executable, type the following
 Type `./pacman.py` to run.
 ##### pacmanGUI.py
   It is the main program or game. The game runs in a graphical interface and pygame module is needed for it.
-  
-  Some snapshots of the game
-  
-  ![Pacman1](https://github.com/iamrakesh28/pacman-game/blob/gui/Images/pac-game1.png) 
   
   ![Pacman2](https://github.com/iamrakesh28/pacman-game/blob/gui/Images/pacman.gif)
 
